@@ -1,0 +1,112 @@
+<!-- Wrapper -->
+<div id="wrapper" class="divided">
+
+  <!-- Banner -->
+    <section class="flex-custom2 banner onload-content-fade-right style5 fullscreen content-align-center image-position-center invert" style='padding-top: 0;'>
+      <div class='custom-header'>
+        <a class='flag' href="/en">
+          🇬🇧
+        </a>
+      </div>
+      <div class="content" style='margin-top: 15vh;'>
+        <h1 style='margin-bottom: 0.5rem !important;'>Olivia & Pierre</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="45" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M57.33333,28.66667c-31.6136,0 -57.33333,25.71973 -57.33333,57.33333c0,31.6136 25.71973,57.33333 57.33333,57.33333c5.61293,0 11.02726,-0.84369 16.15859,-2.35156c-3.75533,-2.82653 -7.21155,-6.0149 -10.31328,-9.52943c-1.92067,0.24653 -3.86158,0.41433 -5.84531,0.41433c-25.28973,0 -45.86667,-20.57693 -45.86667,-45.86667c0,-25.28973 20.57693,-45.86667 45.86667,-45.86667c25.28973,0 45.86667,20.57693 45.86667,45.86667c0,10.25693 -3.4271,19.70824 -9.1375,27.35651c3.08453,2.33347 6.54102,4.13768 10.30208,5.33021c6.47293,-9.28227 10.30208,-20.53779 10.30208,-32.68672c0,-31.6136 -25.71973,-57.33333 -57.33333,-57.33333zM114.66667,28.66667c-5.59573,0 -10.99394,0.83823 -16.1138,2.34036c3.7496,2.8208 7.18915,6.02609 10.29089,9.54062c1.91493,-0.24653 3.84492,-0.41432 5.82292,-0.41432c25.28973,0 45.86667,20.57693 45.86667,45.86667c0,25.28973 -20.57693,45.86667 -45.86667,45.86667c-25.28973,0 -45.86667,-20.57693 -45.86667,-45.86667c0,-10.29133 3.44869,-19.76396 9.19349,-27.4237c-3.0788,-2.32773 -6.54102,-4.14887 -10.30208,-5.34141c-6.50733,9.29373 -10.35808,20.58177 -10.35808,32.7651c0,31.6136 25.71973,57.33333 57.33333,57.33333c31.6136,0 57.33333,-25.71973 57.33333,-57.33333c0,-31.6136 -25.71973,-57.33333 -57.33333,-57.33333z"></path></g></g></svg>
+        <p class="major">Samedi 5 Juin 2021 &ndash; Albertville</p>
+        <p>C’est à l’Eternel qu’il te faut remettre ta vie tout entière. Aie confiance en lui et il agira.<br>Psaumes 37 verset 5</p>
+      </div>
+      <div class='flex-custom' style='margin-bottom: 3vh;'>
+        <b class='custom-test'>PAR ICI !</b>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#ffffff"><path d="M85.94625,3.38625c-1.89469,0.04031 -3.41312,1.59906 -3.38625,3.49375v148.79344l-28.58156,-27.42594c-0.65844,-0.65844 -1.55875,-1.02125 -2.48594,-1.00781c-1.3975,0.04031 -2.64719,0.91375 -3.14437,2.21719c-0.49719,1.30344 -0.16125,2.78156 0.87344,3.73562l36.77844,35.31375l36.77844,-35.31375c0.90031,-0.84656 1.27656,-2.10969 0.98094,-3.30562c-0.29563,-1.19594 -1.20938,-2.15 -2.39188,-2.48594c-1.19594,-0.34937 -2.4725,-0.02687 -3.34594,0.84656l-28.58156,27.42594v-148.79344c0.01344,-0.92719 -0.34937,-1.8275 -1.00781,-2.48594c-0.65844,-0.65844 -1.55875,-1.02125 -2.48594,-1.00781z"></path></g></g></svg>
+      </div>
+      <div class="image">
+        <%= image_tag "banner.jpg", alt: "" %>
+      </div>
+    </section>
+
+  <!-- Gallery -->
+    <section class="wrapper style1 align-center color1" id="first">
+      <div class="inner">
+        <h2 class='white-custom-text'>Important : COVID-19</h2>
+        <p class='white-custom-text'>Afin de rester informer des dernières nouvelles concernant l’organisation du mariage dans le respect des règles sanitaires, renseignez vos coordonnés, nous vous tiendrons au courant. Rassurez-vous, vous inscrire ici ne vous engage en rien !</p>
+
+        <%= simple_form_for @subscription, url: '/subscriptions', input_html: { class: "fields"}, method: 'post' do |f| %>
+          <%= f.error_notification %>
+          <div class='fields'>
+            <div class='field half white-custom-text'>
+              <%= f.input :first_name, label: 'Prénom', input_html: { class: 'white-custom-text white-custom-border'} %>
+              <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+            </div>
+            <div class='field half white-custom-text'>
+              <%= f.input :last_name, label: 'Nom', input_html: { class: 'white-custom-text white-custom-border'} %>
+              <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+            </div>
+            <div class='field white-custom-text'>
+              <%= f.input :email, label:'Adresse mail', input_html: { class: 'white-custom-text white-custom-border'} %>
+              <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+            </div>
+          </div>
+          <div class='actions'>
+            <%= f.button :submit, value: "M'INSCRIRE À LA NEWSLETTER", id: 'very-white-custom-text' %>
+          </div>
+        <% end %>
+      </div>
+    </section>
+
+  <!-- Spotlight -->
+    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+      <div class="content">
+        <h2>Liste de mariage</h2>
+        <p>Vous souhaitez nous faire un petit cadeau ? Consultez la liste de mariage et participez à la cagnotte.</p>
+        <ul class="actions stacked">
+          <li><a href="#" class="button">Découvrir la liste de mariage</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <%= image_tag "listemariage.jpg", alt: "alttext" %>
+      </div>
+    </section>
+
+  <!-- Spotlight -->
+    <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+      <div class="content">
+        <h2>Cérémonie à l'église</h2>
+        <p>C'est le temps fort de la journée ! Quoi de mieux que de remettre notre mariage à Dieu avant toute chose. Rejoignez-nous pour ce temps de célébration ou s'enchaineront, chants, lecture de la Bible ou encore promesses des mariés...</p>
+        <p><i>Église Saint Jean-Baptiste, Place de l’église, 73200 Albertville</i></p>
+        <ul class="actions stacked">
+          <li><a href="https://www.google.fr/maps/place/Eglise+de+Saint+Jean+Baptiste/@45.6783096,6.3884812,17z/data=!3m1!4b1!4m5!3m4!1s0x478bc30564be6239:0x924472b2a8f90360!8m2!3d45.6783059!4d6.3906699" target="_blank" class="button">Regarder la carte</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <%= image_tag "eglise.jpg", alt: "alttext" %>
+      </div>
+    </section>
+
+  <!-- Spotlight -->
+    <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+      <div class="content">
+        <h2>Vin d'honneur convivial</h2>
+        <p>Vous êtes ensuite tous conviés à partager avec nous un vin d'honneur gourmand, si le temps le permet, en plein air. Ce sera l'occasion de pouvoir un peu plus échanger avec chacun d'entre vous et de prendre aussi quelques photos !</p>
+        <p><i>Salle de la Tourmotte, Chemin de la Tourmotte, 73460 Tournon</i></p>
+        <ul class="actions stacked">
+          <li><a href="https://www.google.fr/maps/place/Salle+De+La+Tourmotte/@45.6439831,6.3136011,17z/data=!3m1!4b1!4m5!3m4!1s0x478bc78ce3c0d147:0x89ee4ef704d6a6bc!8m2!3d45.6439794!4d6.3157898"  target="_blank" class="button">Regarder la carte</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <%= image_tag "vindhonneur.jpg", alt: "alttext" %>
+      </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="wrapper style1 align-center" style="background-color: #F3F3F3 !important;">
+      <div class="inner">
+        <h2>Contact</h2>
+        <p>Vous avez une question le déroulé de la journée ? N'hésitez pas à nous écrire à mariage@oliviaetpierre.com</p>
+        <p>À très bientôt !<br>Olivia & Pierre</p>
+      </div>
+    </footer>
+</div>
+
+<div class='pop-position'>
+  <%= render partial: 'shared/popup' =%>
+</div>
+

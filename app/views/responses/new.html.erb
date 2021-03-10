@@ -1,0 +1,81 @@
+<!-- Wrapper -->
+<div id="wrapper" class="divided">
+
+  <!-- Banner -->
+    <section class="flex-custom2 banner onload-image-fade-in onload-content-fade-right - style2 fullscreen orient-center content-align-center image-position-center color-add-1" style='padding-top: 0;'>
+      <div class='custom-header'>
+        <a class='flag' href="/en/fiesta">
+          🇬🇧
+        </a>
+      </div>
+      <div class="content">
+        <h1>La fête n'est pas finie !</h1>
+        <p class='major'>Vous êtes chaleureusement invités à poursuivre la journée avec nous au cours d'une soirée festive.</p>
+        <p>À savoir : L'organisation de la soirée sera susceptible d'évoluer en fonction des contraintes sanitaires.</p>
+        <p><i>À 19h &ndash; Salle communale, 2 Route de la Biolle, 73200 Pallud</i></p>
+        <ul class="actions stacked">
+          <li><a href="#first" class="button large wide smooth-scroll-middle">Je donne ma réponse !</a></li>
+        </ul>
+      </div>
+      <div class="image">
+        <%= image_tag "banner.jpg", alt: "" %>
+      </div>
+    </section>
+
+    <section id='first' class="wrapper style1 align-center">
+      <div class="inner">
+        <h2>Réponse</h2>
+        <p>Important : remplissez le formulaire pour chaque invité !</p>
+        <p>A savoir : les enfants ne sont pas invités à la soirée, il n'y aura pas de garderie organisée.<br>
+        Pour toute question ou cas particulier, n'hésitez pas à nous contacter : mariage@oliviaetpierre.com</p>
+        <div class="index align-left">
+
+          <section>
+            <header>
+              <h3>Formulaire</h3>
+            </header>
+            <div class="content">
+
+              <%= simple_form_for @response, url: '/responses', input_html: { class: "fields"}, method: 'post' do |f| %>
+                <%= f.error_notification %>
+                <div class='fields'>
+                  <div class='field half'>
+                    <%= f.input :first_name, label: 'Prénom' %>
+                    <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+                  </div>
+                  <div class='field half'>
+                    <%= f.input :last_name, label: 'Nom' %>
+                    <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+                  </div>
+                  <div class='field'>
+                    <%= f.input :email, label:'Adresse mail' %>
+                    <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+                  </div>
+                  <div class='field'>
+                    <%= f.input :presence, collection: ["Je serai présent(e) lors de la soirée !", "Malheureusement je ne pourrai pas être des vôtres."], label:'Réponse', include_blank: false %>
+                    <div style='color: red;' class=<%= @error %> >*Ce champ est obligatoire</div>
+                  </div>
+                  <div class='field'>
+                    <%= f.input :allergies, as: :text, label:'Allergies alimentaires' , input_html: { rows: 1 } %>
+                  </div>
+                  <div class='field'>
+                    <%= f.input :note, as: :text, label:'Un petit message pour les mariés ?' , input_html: { rows: 1 } %>
+                  </div>
+                </div>
+                <div class='actions'>
+                  <%= f.button :submit, value: 'Envoyer !', id: 'submit-btn', class: "button primary" %>
+                </div>
+              <% end %>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+</div>
+
+<div class='pop-position'>
+  <%= render partial: 'shared/popup' =%>
+</div>
+
+
